@@ -1,0 +1,62 @@
+/* -- Core ------------------------------------------------------------------ */
+html {
+  color: #444;
+  font: 18px/1.4 'Source Sans Pro', sans-serif;
+}
+
+body {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+a {
+  color: #0000ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+header h1,
+.home h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1.5em;
+  max-width: 315px;
+}
+
+.logo img {
+  height: 420px;
+  padding: 2px;
+  width: 315px;
+}
+
+/* -- Homepage -------------------------------------------------------------- */
+.home {
+  margin: 0 auto;
+}
+
+.home h1 {
+  text-align: center;
+}
+
+/* -- Blog Archives --------------------------------------------------------- */
+.en, .sw { display:none; } /* hide all elements with a language class */
+.en:lang(en), .de:lang(sw) { display:block; } /* show those elements that match their language class */
