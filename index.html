@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw">
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta name="mobile-web-app-capable" content="yes">
@@ -35,13 +35,26 @@
 </head>
 <body>
 <header>
+    <div class="content">
+        <form class="language">
+            <label class="wrap">
+                <input type="radio" id="chk-sw" onclick="window.lang(this.value)" name="lang" value="sw" class="radio" checked="checked"/>
+                <span class="rd-visual sw" title="Kiswahili">Kiswahili</span>
+            </label>
+            <label class="wrap">
+                <input type="radio" id="chk-en" onclick="window.lang(this.value)" name="lang" value="en" class="radio"/>
+                <span class="rd-visual us" title="English">English</span>
+            </label>
+        </form>
+    </div>
+
     <a aria-label="abc.konzo.xyz" class="logo" href="https://abc.konzo.xyz/" rel="home">
         <img alt="" role="presentation" src="images/konzo.png">
     </a>
 </header>
 
 <main class="content home en">
-    <h1>Hi, I'm Eliya Konzo</h1>
+    <h1>Hi, I'm Elijah Konzo</h1>
     <p>I write code. All kinds, but mostly C#. I love soursos and I have opinions.
         Especially about C# and soursops. I live in Tanzania, Dar es salaam with my lovely wife and sons.</p>
     <p>I have worked at <a href="http://www.dayone.co.tz/">Dayone Softcom Technologies</a> developing different solutions for their clients since 2016. I also develop my own apps like <a
@@ -67,6 +80,32 @@
     </p>
 </main>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71695047-5"></script>
+<script type="text/javascript">
+    window.lang=function(lang){
+        document.getElementsByTagName('html')[0].setAttribute('lang',lang);
+        document.cookie = "lang="+lang;
+        document.getElementById("chk-"+lang).checked=true;
+    };
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    if(getCookie("lang")){
+        lang(getCookie("lang"))
+    }
+</script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
