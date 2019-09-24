@@ -35,8 +35,9 @@
 </head>
 <body>
 <header>
-    <div class="content" style="width: 100%">
-        <form class="language">
+    <div style="position: fixed;width: 100%;right: 1em;">
+            <div class="content" style="width: 100%;">
+        <span class="language">
             <label class="wrap">
                 <input type="radio" id="chk-sw" onclick="window.lang(this.value)" name="lang" value="sw" class="radio" checked="checked"/>
                 <span class="rd-visual sw" title="Kiswahili">Kiswahili</span>
@@ -45,8 +46,10 @@
                 <input type="radio" id="chk-en" onclick="window.lang(this.value)" name="lang" value="en" class="radio"/>
                 <span class="rd-visual us" title="English">English</span>
             </label>
-        </form>
+        </span>
     </div>
+    </div>
+
 
     <a aria-label="abc.konzo.xyz" class="logo" href="https://abc.konzo.xyz/" rel="home">
         <img alt="" role="presentation" src="images/konzo.png">
