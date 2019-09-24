@@ -65,7 +65,6 @@ h2 {
 .language
 {
   float: right;
-  position: absolute;
   display: flex;
 }
 
